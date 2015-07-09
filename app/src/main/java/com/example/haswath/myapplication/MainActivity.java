@@ -39,30 +39,27 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /** Called when the user touches the button */
-    public void sendMessage1(View view) {
+    public void sendMessage(View view) {
         // Do something in response to button click
-        Toast.makeText(getApplicationContext(), "This button with launch my spotify streamer app!", Toast.LENGTH_SHORT).show();
-    }
-
-    public void sendMessage2(View view) {
-        // Do something in response to button click
-        Toast.makeText(getApplicationContext(), "This button with launch my scores app!", Toast.LENGTH_SHORT).show();
-    }
-    public void sendMessage3(View view) {
-        // Do something in response to button click
-        Toast.makeText(getApplicationContext(), "This button with launch my library app!", Toast.LENGTH_SHORT).show();
-    }
-    public void sendMessage4(View view) {
-        // Do something in response to button click
-        Toast.makeText(getApplicationContext(), "This button with launch my build it bigger app!", Toast.LENGTH_SHORT).show();
-    }
-    public void sendMessage5(View view) {
-        // Do something in response to button click
-        Toast.makeText(getApplicationContext(), "This button with launch my bacon reader app!", Toast.LENGTH_SHORT).show();
-    }
-    public void sendMessage6(View view) {
-        // Do something in response to button click
-        Toast.makeText(getApplicationContext(), "This button with launch my capstone app!", Toast.LENGTH_SHORT).show();
+        String app = "spotify streamer";
+        switch (view.getId()) {
+            case R.id.button2:
+                app = "scores";
+                break;
+            case R.id.button3:
+                app = "library";
+                break;
+            case R.id.button4:
+                app = "build it bigger";
+                break;
+            case R.id.button5:
+                app = "bacon reader";
+                break;
+            case R.id.button6:
+                app = "capstone";
+                break;
+        }
+        Toast.makeText(getApplicationContext(), "This button with launch my " + app + " app!", Toast.LENGTH_SHORT).show();
     }
 
 }
